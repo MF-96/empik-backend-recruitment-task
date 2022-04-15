@@ -4,7 +4,7 @@ import lombok.*;
 import lombok.extern.slf4j.*;
 import org.springframework.stereotype.*;
 import org.springframework.util.*;
-import pl.empik.demo.dto.*;
+import pl.empik.demo.dto.github.*;
 import pl.empik.demo.exception.*;
 import pl.empik.demo.service.github.*;
 
@@ -15,7 +15,7 @@ public class UserService {
 
   private final GithubApiService githubApiService;
 
-  public GithubUser getUserData(String login) {
+  public GithubUserDTO getUserData(String login) {
     log.info("Getting user data for login: {}", login);
     validateLogin(login);
     return githubApiService.getGithubUser(login);

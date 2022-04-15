@@ -1,8 +1,8 @@
 package pl.empik.demo.service.github;
 
-import pl.empik.demo.dto.*;
+import pl.empik.demo.dto.github.*;
 
 public interface GithubApiService {
 
-  GithubUser getGithubUser(String login);
+  GithubUserDTO getGithubUser(String login);
 }

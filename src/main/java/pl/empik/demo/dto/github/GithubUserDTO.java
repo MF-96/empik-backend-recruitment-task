@@ -1,4 +1,4 @@
-package pl.empik.demo.dto;
+package pl.empik.demo.dto.github;
 
 import com.fasterxml.jackson.annotation.*;
 import lombok.*;
@@ -9,7 +9,7 @@ import java.time.*;
 @Setter
 @NoArgsConstructor
 @ToString
-public class GithubUser {
+public class GithubUserDTO {
 
   @JsonProperty("login")
   private String login;
