@@ -17,14 +17,15 @@ public class UserService {
 
   private final GithubApiService githubApiService;
   private final UserDataFactory userDataFactory;
+  private final UserRequestCountService userRequestCountService;
 
   public UserDataDTO getUserData(String login) {
     log.info("Getting user data for login: {}", login);
     validateLogin(login);
+    userRequestCountService.updateLoginSearch(login);
     GithubUserDTO githubUser = githubApiService.getGithubUser(login);
     return userDataFactory.toUserData(githubUser);
   }
-
 
   private void validateLogin(String login) {
     log.info("Validating login: {}", login);
