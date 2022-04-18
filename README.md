@@ -7,6 +7,8 @@ Dane logowania do bazy - admin:admin
 
 Struktura bazy danych jest tworzona przez skrypt schema.sql
 
+Serwis zwraca null w polu "calculations" kiedy "liczba_followers" jest nullem lub 0 lub kiedy "liczba_public_repos" jest nullem
+
 
 ### Treść zadania
 Stwórz prosty RESTowy serwis, który zwróci informacje:  
