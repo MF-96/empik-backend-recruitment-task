@@ -8,7 +8,9 @@ import java.time.*;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @ToString
+@Builder
 public class GithubUserDTO {
 
   @JsonProperty("login")
